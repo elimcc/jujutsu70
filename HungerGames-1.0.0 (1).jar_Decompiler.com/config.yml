@@ -1,0 +1,94 @@
+# HungerGames Configuration
+# Plugin by DarkNetwork
+
+# -----------------------------------------------
+# General Settings
+# -----------------------------------------------
+settings:
+  # Minimum players required to start a game
+  min-players: 2
+  # Maximum players per arena
+  max-players: 24
+  # Countdown before game starts (seconds)
+  lobby-countdown: 60
+  # Countdown shown when enough players join (seconds)
+  start-countdown: 30
+  # Grace period before PvP is enabled (seconds)
+  grace-period: 30
+  # Maximum game time (minutes, 0 = unlimited)
+  max-game-time: 20
+  # Chest refill time (minutes, 0 = disabled)
+  chest-refill-time: 10
+  # Broadcast game events to all players
+  broadcast-global: false
+  # Auto-delete arena data on world unload
+  auto-cleanup: true
+  # Max distance (blocks) a player can wander from lobby spawn before being teleported back
+  # Set to 0 to disable
+  lobby-radius: 5
+
+# -----------------------------------------------
+# Scoreboard Settings
+# -----------------------------------------------
+scoreboard:
+  enabled: true
+  title: "&001CFF&lHUNGERGAMES"
+  update-interval: 20
+
+# -----------------------------------------------
+# Tablist Settings
+# -----------------------------------------------
+tablist:
+  enabled: true
+  header: "\n&#001CFF&lHUNGERGAMES\n"
+  footer: "\n&7darknetwork.com\n"
+
+# -----------------------------------------------
+# Starting Items
+# -----------------------------------------------
+starting-items:
+  enabled: false
+  items:
+    - material: WOODEN_SWORD
+      amount: 1
+    - material: BREAD
+      amount: 3
+
+# -----------------------------------------------
+# Rewards
+# -----------------------------------------------
+rewards:
+  enabled: true
+  # Vault economy reward for winning
+  vault-reward: 500.0
+  # Commands run as console when a player wins (%player% = winner)
+  commands:
+    - "say %player% has won the Hunger Games!"
+
+# -----------------------------------------------
+# Spectator Settings
+# -----------------------------------------------
+spectator:
+  fly: true
+  hide-from-players: true
+  allow-chat: true
+
+# -----------------------------------------------
+# WorldGuard Settings
+# -----------------------------------------------
+worldguard:
+  enabled: true
+  # Prevent players from building outside arenas
+  region-protection: true
+
+# -----------------------------------------------
+# Database / Storage
+# -----------------------------------------------
+storage:
+  # Storage type: yaml (more types in future versions)
+  type: yaml
+
+# -----------------------------------------------
+# Debug
+# -----------------------------------------------
+debug: false

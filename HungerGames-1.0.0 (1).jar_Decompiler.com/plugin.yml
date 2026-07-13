@@ -1,0 +1,64 @@
+name: HungerGames
+version: '1.0.0'
+main: com.darknetwork.hungergames.HungerGamesPlugin
+api-version: '1.21'
+description: Professional Hunger Games plugin for Minecraft 1.21+
+author: DarkNetwork
+softdepend:
+  - PlaceholderAPI
+  - Vault
+  - WorldGuard
+
+commands:
+  hungergames:
+    description: Main HungerGames command
+    aliases: [hg]
+    usage: /hg help
+    permission: hungergames.use
+
+permissions:
+  hungergames.use:
+    description: Allows use of player commands
+    default: true
+  hungergames.admin:
+    description: Allows use of admin commands
+    default: op
+  hungergames.join:
+    description: Allows joining a game
+    default: true
+  hungergames.leave:
+    description: Allows leaving a game
+    default: true
+  hungergames.list:
+    description: Allows listing arenas
+    default: true
+  hungergames.stats:
+    description: Allows viewing stats
+    default: true
+  hungergames.spectate:
+    description: Allows spectating
+    default: true
+  hungergames.create:
+    description: Allows creating arenas
+    default: op
+  hungergames.delete:
+    description: Allows deleting arenas
+    default: op
+  hungergames.setspawn:
+    description: Allows setting spawn points
+    default: op
+  hungergames.setlobby:
+    description: Allows setting lobby
+    default: op
+  hungergames.forcestart:
+    description: Allows force starting
+    default: op
+  hungergames.stop:
+    description: Allows stopping games
+    default: op
+  hungergames.reload:
+    description: Allows reloading config
+    default: op
+  hungergames.info:
+    description: Allows viewing arena info
+    default: op

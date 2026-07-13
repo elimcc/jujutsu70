@@ -1,0 +1,141 @@
+# HungerGames Messages
+# Supports color codes & hex colors &#RRGGBB
+# Prefix is automatically prepended to all messages
+
+prefix: "&#001CFF&lʜᴜɴɢᴇʀɢᴀᴍᴇѕ &7→ "
+
+# -----------------------------------------------
+# General
+# -----------------------------------------------
+general:
+  no-permission: "&cYou don't have permission to do that."
+  player-only: "&cThis command can only be used by players."
+  unknown-command: "&cUnknown command. Use /hg help for a list of commands."
+  reloaded: "&aPlugin configuration reloaded successfully."
+  invalid-arena: "&cArena '&f{arena}&c' does not exist."
+  invalid-number: "&cInvalid number specified."
+  console-no-arena: "&cYou must specify an arena name."
+
+# -----------------------------------------------
+# Help
+# -----------------------------------------------
+help:
+  header: "\n&#001CFF&l&m----&r &#001CFF&lHUNGER GAMES &7HELP &#001CFF&l&m----&r"
+  footer: "&#001CFF&l&m---------------------------&r\n"
+  player-commands: "&7Player Commands:"
+  admin-commands: "&7Admin Commands:"
+  join: "  &f/hg join &8<arena> &7- &fJoin an arena"
+  leave: "  &f/hg leave &7- &fLeave current game"
+  list: "  &f/hg list &7- &fList all arenas"
+  stats: "  &f/hg stats &7- &fView your statistics"
+  spectate: "  &f/hg spectate &8<player> &7- &fSpectate a player"
+  create: "  &f/hg create &8<arena> &7- &fCreate an arena"
+  delete: "  &f/hg delete &8<arena> &7- &fDelete an arena"
+  setspawn: "  &f/hg setspawn &8<arena> <number> &7- &fSet a spawn point"
+  setlobby: "  &f/hg setlobby &8<arena> &7- &fSet the arena lobby"
+  forcestart: "  &f/hg forcestart &8<arena> &7- &fForce start a game"
+  stop: "  &f/hg stop &8<arena> &7- &fStop a game"
+  reload: "  &f/hg reload &7- &fReload the plugin"
+  info: "  &f/hg info &8<arena> &7- &fView arena info"
+
+# -----------------------------------------------
+# Arena
+# -----------------------------------------------
+arena:
+  created: "&aArena '&f{arena}&a' has been created successfully."
+  already-exists: "&cArena '&f{arena}&c' already exists."
+  deleted: "&aArena '&f{arena}&a' has been deleted."
+  spawn-set: "&aSpawn point &f#{number}&a set for arena '&f{arena}&a'."
+  lobby-set: "&aLobby location set for arena '&f{arena}&a'."
+  not-setup: "&cArena '&f{arena}&c' is not fully set up. Use /hg info to check."
+  in-progress: "&cArena '&f{arena}&c' already has a game in progress."
+  info-header: "\n&#001CFF&l&m----&r &#001CFF&lARENAINFO: &f{arena} &#001CFF&l&m----&r"
+  info-status: " &7Status: &f{status}"
+  info-players: " &7Players: &f{current}&7/&f{max}"
+  info-spawns: " &7Spawn Points: &f{spawns}"
+  info-lobby: " &7Lobby Set: &f{lobby}"
+  info-footer: "&#001CFF&l&m---------------------------&r\n"
+
+# -----------------------------------------------
+# Game - Lobby
+# -----------------------------------------------
+lobby:
+  joined: "&aYou have joined the lobby for arena '&f{arena}&a'."
+  joined-broadcast: "&f{player} &7has joined the lobby! &f({current}/{max})"
+  left: "&aYou have left the lobby."
+  left-broadcast: "&f{player} &7has left the lobby. &f({current}/{max})"
+  full: "&cThis arena is full."
+  already-in-game: "&cYou are already in a game or lobby."
+  not-in-game: "&cYou are not in a game."
+  waiting: "&7Waiting for more players... &f({current}/{min})"
+  countdown-start: "&7Starting in &f{seconds} &7seconds..."
+  countdown-broadcast: "&#001CFF&lThe game will start in &f{seconds} &7seconds!"
+  countdown-cancel: "&cCountdown cancelled — not enough players."
+
+# -----------------------------------------------
+# Game - Start
+# -----------------------------------------------
+game:
+  starting: "\n&#001CFF&l&m---------&r &#001CFF&lTHE HUNGER GAMES &7HAVE BEGUN &#001CFF&l&m---------&r\n"
+  starting-line2: "&#001CFF&l{arena} &7| &f{players} tributes have entered the arena"
+  starting-line3: "&#001CFF&l&m-----------------------------------------&r\n"
+  grace-period: "&7PvP will be enabled in &f{seconds}&7 seconds!"
+  pvp-enabled: "&#001CFF&lPvP is now enabled! &7May the odds be ever in your favor."
+  force-started: "&aForce starting arena '&f{arena}&a'..."
+  stopped: "&aGame in arena '&f{arena}&a' has been stopped."
+  stopped-broadcast: "&#001CFF&lThe game in &f{arena} &7has been stopped by an admin."
+  no-game: "&cThere is no active game in arena '&f{arena}&c'."
+  chest-refill: "&#001CFF&l&oThe chests have been refilled!"
+
+# -----------------------------------------------
+# Game - Elimination
+# -----------------------------------------------
+elimination:
+  killed: "&#001CFF&l{player} &7has been eliminated! &f({alive} remaining)"
+  killed-by: "&#001CFF&l{player} &7was eliminated by &#001CFF&l{killer}&7! &f({alive} remaining)"
+  became-spectator: "&7You have been eliminated. You are now spectating."
+
+# -----------------------------------------------
+# Game - End
+# -----------------------------------------------
+end:
+  winner: "\n&#001CFF&l&m---------&r &#001CFF&lTHE WINNER &7IS &#001CFF&l&m---------&r\n"
+  winner-name: "        &#001CFF&l&n{winner}"
+  winner-line3: "\n&#001CFF&l&m-----------------------------------------&r\n"
+  winner-kills: "&7You earned &f{kills} kill(s) &7this game."
+  reward-given: "&aYou have been rewarded &f${amount}&a!"
+  no-winner: "&#001CFF&lThe game has ended with no winner!"
+  stats-updated: "&7Your stats have been updated."
+
+# -----------------------------------------------
+# Spectator
+# -----------------------------------------------
+spectator:
+  now-spectating: "&7You are now spectating &f{player}&7."
+  player-not-found: "&cPlayer '&f{player}&c' not found or is not in a game."
+  cannot-interact: "&cSpectators cannot interact with the game."
+  enabled: "&7You are now in &fSpectator Mode&7."
+
+# -----------------------------------------------
+# Stats
+# -----------------------------------------------
+stats:
+  header: "\n&#001CFF&l&m----&r &#001CFF&lYOUR STATISTICS &#001CFF&l&m----&r"
+  wins: " &7Wins: &#001CFF&l{wins}"
+  kills: " &7Kills: &#001CFF&l{kills}"
+  deaths: " &7Deaths: &#001CFF&l{deaths}"
+  games-played: " &7Games Played: &#001CFF&l{games}"
+  kdr: " &7K/D Ratio: &#001CFF&l{kdr}"
+  footer: "&#001CFF&l&m---------------------------&r\n"
+
+# -----------------------------------------------
+# List
+# -----------------------------------------------
+list:
+  header: "\n&#001CFF&l&m----&r &#001CFF&lARENA LIST &#001CFF&l&m----&r"
+  entry-waiting: " &#001CFF&l{arena} &7- &aWaiting &7({current}/{max})"
+  entry-lobby: " &#001CFF&l{arena} &7- &eIn Lobby &7({current}/{max})"
+  entry-ingame: " &#001CFF&l{arena} &7- &cIn Game &7({current}/{max})"
+  entry-setup: " &#001CFF&l{arena} &7- &7Setting Up"
+  no-arenas: "&7No arenas have been created yet."
+  footer: "&#001CFF&l&m---------------------------&r\n"
